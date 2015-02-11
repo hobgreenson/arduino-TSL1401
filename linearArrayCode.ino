@@ -100,15 +100,13 @@ void setup() {
 void loop() {
   // find the minimum pixel value, indicating tail position
   m = 30;
-  for(i = 0; i < L_ARRAY; i++) {
+  mi = 1;
+  for(i = 1; i < L_ARRAY; i++) {
     if(pixels[i] < m) {
       mi = i;
       m = pixels[i];
     }
   } 
-  
-  //pix = pixels[65];
-  
   // send minimum pixel index
   Serial.write(mi); 
 }
