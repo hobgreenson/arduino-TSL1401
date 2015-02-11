@@ -3,7 +3,7 @@ import serial
 import numpy as np
 import matplotlib.pyplot as plt
 
-# simple script to recieve data from an arduino 
+# simple script to receive data from an arduino 
 # via serial port and plot the data 
 
 port_name = "/dev/tty.usbmodem1421"
