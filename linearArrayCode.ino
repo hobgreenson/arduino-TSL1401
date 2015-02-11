@@ -58,7 +58,6 @@ ISR(ADC_vect) {
     ADCSRA |= (1 << ADSC); // start next conversion
 }
 
-// this function executes once to set everything up
 int main(void) {
     // use serial library for communication with MATLAB
     Serial.begin(4000000);
