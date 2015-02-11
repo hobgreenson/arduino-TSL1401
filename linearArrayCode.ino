@@ -59,7 +59,7 @@ ISR(ADC_vect) {
 }
 
 // this function executes once to set everything up
-void setup() {
+int main(void) {
     // use serial library for communication with MATLAB
     Serial.begin(4000000);
   
@@ -92,21 +92,21 @@ void setup() {
   
     // first conversion
     ADCSRA |= (1 << ADSC);
-}
-
-// this function runs forever (or until you kill the arduino)
-void loop() {
-    // find the minimum pixel value, indicating tail position
-    m = 30;
-    mi = 0;
-    for (i = 1; i < L_ARRAY; ++i) {
-        if (pixels[i] < m) {
-            mi = i;
-            m = pixels[i];
+    
+    while (1) {
+        // find the minimum pixel value, indicating tail position
+        m = 30;
+        mi = 0;
+        for (i = 1; i < L_ARRAY; ++i) {
+            if (pixels[i] < m) {
+                mi = i;
+                m = pixels[i];
+            }
         }
-    }
-    // send minimum pixel index
-    Serial.write(mi); 
+        // send minimum pixel index
+        Serial.write(mi);
+    } 
+    return 0;
 }
 
 
