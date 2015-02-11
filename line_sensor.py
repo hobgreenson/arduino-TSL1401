@@ -7,9 +7,8 @@ import matplotlib.pyplot as plt
 # via serial port and plot the data 
 
 port_name = "/dev/tty.usbmodem1421"
-baud = 115200
-ser = serial.Serial(port=port_name, baudrate=baud)#, timeout=1)
-bytes_available = 0 # bytes available to read from serial port
+baud = 4000000
+ser = serial.Serial(port=port_name, baudrate=baud)
 data_buffer = [] # buffer to store incoming data
 duration = 10.0 # duration (s) of reading from the serial port
 elapsed = 0 # elapsed (s) time reading from the serial port
@@ -18,10 +17,8 @@ print "beginning to read data"
 ser.flushInput() # get rid of any junk in the serial buffer
 t_start = time.time()
 while (elapsed <= duration): 
-    bytes_available = ser.inWaiting()
-    data_buffer += ser.read(bytes_available)
+    data_buffer += ser.read(ser.inWaiting()) # blocks until all bytes read
     elapsed = time.time() - t_start
-
 ser.close()
 
 data = np.array([ord(c) for c in data_buffer]) # convert buffer to an numpy array
