@@ -63,7 +63,7 @@ ISR(ADC_vect) {
 // this function executes once to set everything up
 void setup() {
   // use serial library for communication with MATLAB
-  Serial.begin(8*115200);
+  Serial.begin(115200);
   
   // set up digital output pins on port B; CLK = B3 (pin 11) and SI = B0 (pin 8)
   DDRB = 0; // zero the register
@@ -100,7 +100,7 @@ void setup() {
 void loop() {
   // find the minimum pixel value, indicating tail position
   m = 30;
-  mi = 1;
+  mi = 0;
   for(i = 1; i < L_ARRAY; i++) {
     if(pixels[i] < m) {
       mi = i;
