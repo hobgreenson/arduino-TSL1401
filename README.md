@@ -1,10 +1,21 @@
-arduino-TSL1401
-===============
+arduino-TSLXX
+=============
 
-code to interface arduino uno with the TSL1401 line sensor
+Arduino Library to interface Arduino Boards with the TSLXX line sensor series.
 
-use the arduino IDE to load this code onto an arduino uno board
-(ATmega 328P)
+Supported models include
 
-computes location of a dark object on the line sensor. On Linux
-and MacOSX, I get > 4kHz sample rates.
+ * TAOS<sup>1</sup> TSL1401
+ * TAOS<sup>1</sup> TSL1402
+ * TAOS<sup>1</sup> TSL1406
+ * TAOS<sup>1</sup> TSL1412
+ * TAOS<sup>1</sup> TSL201
+ * iC-Haus<sup>2</sup> iC-LF1401
+
+
+Arduino Library by Tobias Vogel.
+
+Based on the code by Matthew Green (@hobgreenson).
+
+<sup>1</sup> Former TAOS Inc. [http://www.taosinc.com] is now ams [http://www.ams.com]
+<sup>2</sup> iC-Haus [http://www.ichaus.de] 
