@@ -16,9 +16,9 @@ Supported models include
 
 Arduino Library by Tobias Vogel.
 
-Based on the code by [Matthew Green](http://www.github.com/hobgreenson/TSL1401).
+Based on the code by [Matthew Green](http://www.github.com/hobgreenson/arduino-TSL1401).
 
 
 <sup>1</sup> Former [TAOS Inc.](http://www.taosinc.com) is now [ams](http://www.ams.com)
 
-<sup>2</sup> [iC-Haus](http://www.ichaus.de]
+<sup>2</sup> [iC-Haus](http://www.ichaus.de)
