@@ -12,4 +12,7 @@ SOURCES += main.cpp plotwindow.cpp
 
 QT += serialport widgets core
 
+RC_ICONS += icon.png
+ICON = icon.icns
+
 LIBS += -L/Applications/Qt/5.5/clang_64/lib
