@@ -15,4 +15,6 @@ QT += serialport widgets core
 RC_ICONS += icon.png
 ICON = icon.icns
 
-LIBS += -L/Applications/Qt/5.5/clang_64/lib
+macx:LIBS += -L/Applications/Qt/5.5/clang_64/lib
+
+QMAKE_TARGET_BUNDLE_PREFIX = tv.tobiasvogel.
